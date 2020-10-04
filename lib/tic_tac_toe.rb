@@ -107,13 +107,14 @@ end
 end
 
 def play(board)
-until over?(board) == true
-  turn(board)
-end
-if won?(board)
-  puts "Congratulations #{winner(board)}!"
-elsif draw?(board)
-  puts "Cat's Game!"
-end
+  if !over?(board)
+    turn(board)
+  else
+  end
 
+  if won?(board)
+    puts "Congratulations #{winner(board)}!"
+  elsif draw?(board)
+    puts "Cat's Game!"
+  end
 end
