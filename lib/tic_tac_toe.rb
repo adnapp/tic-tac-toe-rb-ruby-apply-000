@@ -108,8 +108,8 @@ end
 
 def play(board)
   input = gets
-  turn(board)
 until over?(board) == true
+  turn(board)
 end
 if won?(board)
   puts "Congratulations #{winner(board)}!"
